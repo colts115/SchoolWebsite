@@ -1,13 +1,7 @@
-function initMap() {
-    const startingPoint = {lat: 41.2392, lng: -85.850};
-    
-    const map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 15,
-        center: startingPoint,
-    });
+const map = L.map('map').setView([41.225, -85.815], 17);
 
-    new google.maps.Marker({
-        position: startingPoint, 
-        map: map, 
-    });
-}
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+
