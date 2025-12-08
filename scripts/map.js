@@ -20,8 +20,8 @@ var locations = {
     .bindPopup("<b>Campus Store</b>"),
 
     // Add marker for Beta Field
-    "store": L.marker([41.22463398043403, -85.81286787986757]).addTo(map)
-    .bindPopup("<b>Beta Fieldr</b>"),
+    "beta": L.marker([41.22463398043403, -85.81286787986757]).addTo(map)
+    .bindPopup("<b>Beta Field</b>"),
 
      // Add marker for starbucks
     "starbucks": L.marker([41.225767734942025, -85.81327557563783]).addTo(map)
@@ -46,12 +46,14 @@ var locations = {
     // Add marker for Winona Lake 
     "winona": L.marker([41.22855563840197, -85.82251310348511]).addTo(map)
     .bindPopup("<b>Winona Lake</b>"),
-
-
-
-
-
-
 }
 
+const params = new URLSearchParams(window.location.search);
+const target = params.get('place');
+
+if (target && locations [target]) {
+    map.setView(locations[target].getLatLng(), 18);
+
+    locations[target].openPopup();
+}
 
