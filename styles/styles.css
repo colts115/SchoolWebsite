@@ -32,3 +32,14 @@ h2{
 .text-primary {
     color: black !important; 
 }
+
+.ul{
+    padding-left: 2rem;
+    list-style:armenian;
+}
+a{
+    color:#C8102E;
+}
+a.hover{
+    color:#47040f;
+}

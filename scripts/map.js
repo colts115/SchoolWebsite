@@ -51,7 +51,7 @@ var locations = {
 const params = new URLSearchParams(window.location.search);
 const target = params.get('place');
 
-if (target && locations [target]) {
+if (target && locations[target]) {
     map.setView(locations[target].getLatLng(), 18);
 
     locations[target].openPopup();
