@@ -16,3 +16,19 @@ h2{
     margin-bottom: 2rem; 
 }
 
+.bg-primary {
+    background-color: #C8102E !important;}
+
+.btn-primary{
+    background-color: #C8102E !important;
+    border-color: black !important;
+}
+
+.btn-primary:hover{
+      background-color: #730f20 !important;
+    border-color: black !important;
+}
+
+.text-primary {
+    color: black !important; 
+}
